@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import libraryReducer from '../features/library/librarySlice'
+import bookSliceReducer from '../features/fetchBooks/fetchBooksSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    library: libraryReducer,
+    search: bookSliceReducer
   },
 });
